@@ -1,0 +1,7 @@
+#!/bin/bash
+set -e
+
+mkdir -p "/usr/lib/confexts/Factory/etc"
+cp -r "/etc" "/usr/lib/confexts/Factory/etc"
+touch "/usr/lib/confexts/Factory/etc/extension-release.d/extension-release.Factory"
+echo "ID=_any" >> "/usr/lib/confexts/Factory/etc/extension-release.d/extension-release.Factory"

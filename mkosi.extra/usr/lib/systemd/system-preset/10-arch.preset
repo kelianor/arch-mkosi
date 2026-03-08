@@ -1,0 +1,16 @@
+enable systemd-networkd.service
+enable systemd-resolved.service
+enable iwd.service # Since we are using iwd
+
+enable systemd-timesyncd.service
+
+enable tuned.service
+enable tuned-ppd.service
+
+enable bluetooth.service
+
+enable gdm.service
+
+enable systemd-confext.service
+
+disable systemd-firstboot.service
