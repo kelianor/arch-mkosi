@@ -1,11 +1,18 @@
 #!/bin/bash
 set -e
 
-mkdir -p "/usr/lib/confexts/Factory/etc"
-cd "/usr/lib/confexts/Factory/etc"
-cp -r "/etc" .
+# Create a "Factory" systemd confext image
+LOCATION="/usr/lib/confexts/"
+NAME="Factory"
 
-mkdir -p "./etc/extension-release.d/"
-touch "./etc/extension-release.d/extension-release.Factory"
+mkdir -p "$LOCATION/$NAME/etc/extension-release.d/"
+touch "$LOCATION/$NAME/etc/extension-release.d/extension-release.$NAME"
 
-echo "ID=_any" >> "./etc/extension-release.d/extension-release.Factory"
+tee "$LOCATION/$NAME/etc/extension-release.d/extension-release.$NAME" <<EOF
+$(grep "^ID=" /etc/os-release)
+$(grep "^VERSION_ID=" /etc/os-release)
+CONFEXT_LEVEL=1.0
+EOF
+
+# Copy all files from /etc to a "Factory" systemd confext image
+cp -r "/etc/*" $LOCATION/$NAME/etc/
