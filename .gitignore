@@ -1,5 +1,5 @@
-
-
+mkosu.output/*
+mkosu.cache/*
 mkosi.tools/
 mkosi.crt
 mkosi.key
