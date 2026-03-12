@@ -37,12 +37,12 @@ jobs:
       - name: Copy secret key
         env:
           MKOSI_KEY: ${{ secrets.MKOSI_KEY }}
-        run: echo -n $MKOSI_KEY | base64 -d -o ./mkosi.key
+        run: echo -n "$MKOSI_KEY" | base64 -d > ./mkosi.key
         
       - name: Copy certificate
         env:
           MKOSI_KEY: ${{ secrets.MKOSI_CRT }}
-        run: echo -n $MKOSI_CRT | base64 -d -o ./mkosi.crt
+        run: echo -n "$MKOSI_CRT" | base64 -d > ./mkosi.crt
 
       - name: Secure permissions
         run: chmod 600 mkosi.key mkosi.crt
