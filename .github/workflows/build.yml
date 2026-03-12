@@ -37,6 +37,8 @@ jobs:
         env:
           MKOSI_KEY: ${{ secrets.MKOSI_CRT }}
         run: echo -e "-----BEGIN CERTIFICATE-----\n$MKOSI_CRT\n-----END CERTIFICATE-----" > mkosi.crt
-        
+
+      - name: Secure permissions
+        run: chmod 600 mkosi.key mkosi.crt
       - name: Build a mkosi
         run: mkosi -B -f
