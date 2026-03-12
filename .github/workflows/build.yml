@@ -28,8 +28,15 @@ jobs:
       - name: Install mkosi
         run: sudo apt install mkosi
         
-      - name: Generate keys
-        run: mkosu genkey
+      - name: Copy secret key
+        env:
+          MKOSI_KEY: ${{ secrets.MKOSI_KEY }}
+        run: echo -e "-----BEGIN PRIVATE KEY-----\n$MKOSI_KEY\n-----END PRIVATE KEY-----" > mkosi.key
+        
+      - name: Copy certificate
+        env:
+          MKOSI_KEY: ${{ secrets.MKOSI_CRT }}
+        run: echo -e "-----BEGIN CERTIFICATE-----\n$MKOSI_CRT\n-----END CERTIFICATE-----" > mkosi.crt
         
       - name: Build a mkosi
-        run: mkosu -B -f
+        run: mkosi -B -f
