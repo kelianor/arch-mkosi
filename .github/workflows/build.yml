@@ -37,15 +37,15 @@ jobs:
       - name: Copy secret key
         env:
           MKOSI_KEY: ${{ secrets.MKOSI_KEY }}
-        run: echo -n "$MKOSI_KEY" | base64 -d > ./mkosi.key
+        run: distrobox enter archlinux -- echo -n "$MKOSI_KEY" | base64 -d > ./mkosi.key
         
       - name: Copy certificate
         env:
           MKOSI_KEY: ${{ secrets.MKOSI_CRT }}
-        run: echo -n "$MKOSI_CRT" | base64 -d > ./mkosi.crt
+        run: distrobox enter archlinux -- echo -n "$MKOSI_CRT" | base64 -d > ./mkosi.crt
 
       - name: Secure permissions
-        run: chmod 600 mkosi.key mkosi.crt
+        run: distrobox enter archlinux -- chmod 600 mkosi.key mkosi.crt
       - name: Build a mkosi
         run: |
           mkdir mkosi.cache
