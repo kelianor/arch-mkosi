@@ -13,5 +13,6 @@ enable gdm.service
 
 enable systemd-confext.service
 enable NetworkManager.service
+enable plymouth.serivice
 
 disable systemd-firstboot.service
