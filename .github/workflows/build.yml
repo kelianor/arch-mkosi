@@ -31,7 +31,7 @@ jobs:
           distrobox create --yes --image archlinux --init --unshare-all archlinux
 
       - name: Install mkosi into a container
-        run: distrobox enter archlinux -- sudo pacman -Syu --noconfirm mkosi cpio mtools btrfs-progs systemd-ukify dosfstools arch-install-scripts
+        run: distrobox enter archlinux -- sudo pacman -Syu --noconfirm mkosi cpio mtools erofs-tools btrfs-progs systemd-ukify dosfstools arch-install-scripts
 
         
       - name: Copy secret key
@@ -47,4 +47,7 @@ jobs:
       - name: Secure permissions
         run: chmod 600 mkosi.key mkosi.crt
       - name: Build a mkosi
-        run: distrobox enter archlinux -- mkosi -B -f
+        run: |
+          mkdir mkosi.cache
+          mkdir mkosi.output
+          distrobox enter archlinux -- mkosi -B -f
