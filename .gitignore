@@ -1,6 +1,6 @@
-mkosi.cache/*
-mkosi.output/*
-mkosi.tools/*
+mkosi.cache/
+mkosi.output/
+mkosi.tools/
 mkosi.crt
 mkosi.key
 mkosi.version

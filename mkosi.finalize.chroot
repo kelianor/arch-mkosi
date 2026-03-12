@@ -15,4 +15,4 @@ CONFEXT_LEVEL=1.0
 EOF
 
 # Copy all files from /etc to a "Factory" systemd confext image
-cp -r "/etc/*" $LOCATION/$NAME/etc/
+cp -r "/etc/" $LOCATION/$NAME

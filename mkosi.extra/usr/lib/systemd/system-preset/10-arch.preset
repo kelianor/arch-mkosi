@@ -12,5 +12,6 @@ enable bluetooth.service
 enable gdm.service
 
 enable systemd-confext.service
+enable NetworkManager.service
 
 disable systemd-firstboot.service
