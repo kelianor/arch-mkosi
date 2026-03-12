@@ -28,7 +28,7 @@ jobs:
       - name: Install and create distrobox
         run: |
           sudo apt install distrobox podman
-          distrobox create --image archlinux --init --unshare-all archlinux
+          distrobox create --yes --image archlinux --init --unshare-all archlinux
 
       - name: Install mkosi into a container
         run: distrobox enter archlinux -- sudo pacman -Syu --noconfirm mkosi cpio mtools btrfs-progs systemd-ukify dosfstools arch-install-scripts
