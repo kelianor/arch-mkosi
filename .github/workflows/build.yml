@@ -25,8 +25,14 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      - name: Install mkosi
-        run: sudo apt install mkosi
+      - name: Install and create distrobox
+        run: |
+          sudo apt install distrobox podman
+          distrobox create --image archlinux --init --unshare-all archlinux
+
+      - name: Install mkosi into a container
+        run: distrobox enter archlinux -- sudo pacman -Syu --noconfirm mkosi cpio mtools btrfs-progs systemd-ukify dosfstools arch-install-scripts
+
         
       - name: Copy secret key
         env:
@@ -41,4 +47,4 @@ jobs:
       - name: Secure permissions
         run: chmod 600 mkosi.key mkosi.crt
       - name: Build a mkosi
-        run: mkosi -B -f
+        run: distrobox enter archlinux -- mkosi -B -f
