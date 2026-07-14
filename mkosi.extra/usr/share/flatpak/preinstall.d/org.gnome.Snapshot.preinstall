@@ -1,0 +1,4 @@
+[Flatpak Preinstall org.gnome.Snapshot]
+Install=true
+IsRuntime=false
+Branch=stable

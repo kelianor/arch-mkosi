@@ -1,0 +1,4 @@
+[Flatpak Preinstall org.gnome.Weather]
+Install=true
+IsRuntime=false
+Branch=stable

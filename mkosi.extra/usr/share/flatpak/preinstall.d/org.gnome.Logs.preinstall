@@ -1,0 +1,5 @@
+[Flatpak Preinstall org.gnome.Logs]
+Install=true
+IsRuntime=false
+Branch=stable
+

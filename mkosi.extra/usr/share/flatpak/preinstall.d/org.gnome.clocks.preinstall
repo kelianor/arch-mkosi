@@ -1,0 +1,4 @@
+[Flatpak Preinstall org.gnome.clocks]
+Install=true
+IsRuntime=false
+Branch=stable

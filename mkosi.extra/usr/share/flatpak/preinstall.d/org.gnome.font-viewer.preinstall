@@ -1,0 +1,4 @@
+[Flatpak Preinstall org.gnome.font-viewer]
+Install=true
+IsRuntime=false
+Branch=stable

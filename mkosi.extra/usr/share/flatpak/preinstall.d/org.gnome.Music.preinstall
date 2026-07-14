@@ -1,0 +1,4 @@
+[Flatpak Preinstall org.gnome.Music]
+Install=true
+IsRuntime=false
+Branch=stable
