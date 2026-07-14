@@ -1,0 +1,79 @@
+[Flatpak Preinstall org.gnome.baobab]
+Install=true
+IsRuntime=false
+
+[Flatpak Preinstall org.gnome.Decibels]
+Install=true
+IsRuntime=false
+
+[Flatpak Preinstall org.gnome.Epiphany]
+Install=true
+IsRuntime=false
+
+[Flatpak Preinstall org.gnome.Calculator]
+Install=true
+IsRuntime=false
+
+[Flatpak Preinstall org.gnome.Calendar]
+Install=true
+IsRuntime=false
+
+[Flatpak Preinstall org.gnome.Characters]
+Install=true
+IsRuntime=false
+
+[Flatpak Preinstall org.gnome.clocks]
+Install=true
+IsRuntime=false
+
+[Flatpak Preinstall org.gnome.Connections]
+Install=true
+IsRuntime=false
+
+[Flatpak Preinstall org.gnome.Contacts]
+Install=true
+IsRuntime=false
+
+[Flatpak Preinstall org.gnome.font-viewer]
+Install=true
+IsRuntime=false
+
+[Flatpak Preinstall org.gnome.Logs]
+Install=true
+IsRuntime=false
+
+[Flatpak Preinstall org.gnome.Maps]
+Install=true
+IsRuntime=false
+
+[Flatpak Preinstall org.gnome.Music]
+Install=true
+IsRuntime=false
+
+[Flatpak Preinstall org.gnome.TextEditor]
+Install=true
+IsRuntime=false
+
+[Flatpak Preinstall org.gnome.Weather]
+Install=true
+IsRuntime=false
+
+[Flatpak Preinstall org.gnome.Loupe]
+Install=true
+IsRuntime=false
+
+[Flatpak Preinstall org.gnome.Papers]
+Install=true
+IsRuntime=false
+
+[Flatpak Preinstall org.gnome.Showtime]
+Install=true
+IsRuntime=false
+
+[Flatpak Preinstall org.gnome.SimpleScan]
+Install=true
+IsRuntime=false
+
+[Flatpak Preinstall org.gnome.Snapshot]
+Install=true
+IsRuntime=false
